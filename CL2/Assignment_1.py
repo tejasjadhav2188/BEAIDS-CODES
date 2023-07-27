@@ -19,7 +19,7 @@ word_tokens = word_tokenize(example_sent)
 # using list comprehension for creating a list of stopword filtered array
 filtered_sentence = [w for w in word_tokens if not w.lower() in stop_words]
 
-# using list comprehension for creating a list of stemmed words
+# using reduce and lambda function for creating a list of stemmed words
 stemmed_sentence = reduce(lambda x, y: x + " " + ps.stem(y), word_tokens, "") 
 
 print(f"Array tokenized words : {word_tokens}")
